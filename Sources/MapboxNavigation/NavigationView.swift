@@ -37,6 +37,7 @@ import MapboxCoreNavigation
  ```
  */
 @IBDesignable
+@objc
 open class NavigationView: UIView {
     
     enum Constants {
@@ -155,6 +156,7 @@ open class NavigationView: UIView {
     /**
      A host view for `WayNameLabel` that shows a road name and a shield icon.
      */
+    @objc
     public lazy var wayNameView: WayNameView = {
         let wayNameView: WayNameView = .forAutoLayout()
         wayNameView.containerView.isHidden = true
@@ -171,6 +173,7 @@ open class NavigationView: UIView {
     /**
      A view that displays a speed limit.
      */
+    @objc
     public lazy var speedLimitView: SpeedLimitView = .forAutoLayout(hidden: true)
     
     /**
@@ -178,6 +181,7 @@ open class NavigationView: UIView {
      `NavigationViewController` presents `TopBannerViewController` in this banner
      container.
      */
+    @objc
     public lazy var topBannerContainerView: BannerContainerView = {
         let topBannerContainerView = BannerContainerView(.topLeading)
         topBannerContainerView.isHidden = true
@@ -190,6 +194,7 @@ open class NavigationView: UIView {
      `NavigationViewController` presents `BottomBannerViewController` in this banner
      container.
      */
+    @objc
     public lazy var bottomBannerContainerView: BannerContainerView = {
         let bottomBannerContainerView = BannerContainerView(.bottomLeading)
         bottomBannerContainerView.isHidden = true

@@ -29,6 +29,7 @@ public typealias ContainerViewController = UIViewController & NavigationComponen
  Guidance session. The trip session is stopped when the instance is deallocated. For more info read the
  [Pricing Guide](https://docs.mapbox.com/ios/beta/navigation/guides/pricing/).
  */
+@objc
 open class NavigationViewController: UIViewController, NavigationStatusPresenter, NavigationViewData, BuildingHighlighting {
     
     // MARK: Accessing the View Hierarchy
@@ -417,6 +418,7 @@ open class NavigationViewController: UIViewController, NavigationStatusPresenter
      - parameter routeResponse: `IndexedRouteResponse` object, containing selection of routes to follow.
      - parameter navigationOptions: The navigation options to use for the navigation session.
      */
+    @objc
     required public init(for indexedRouteResponse: IndexedRouteResponse, navigationOptions: NavigationOptions? = nil) {
         super.init(nibName: nil, bundle: nil)
         
