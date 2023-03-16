@@ -418,7 +418,7 @@ open class NavigationViewController: UIViewController, NavigationStatusPresenter
      - parameter routeResponse: `IndexedRouteResponse` object, containing selection of routes to follow.
      - parameter navigationOptions: The navigation options to use for the navigation session.
      */
-    @objc
+   
     required public init(for indexedRouteResponse: IndexedRouteResponse, navigationOptions: NavigationOptions? = nil) {
         super.init(nibName: nil, bundle: nil)
         
